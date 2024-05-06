@@ -1,0 +1,43 @@
+execve("/usr/bin/pip", ["pip", "install", "bootstrap"], 0x7ffc5378fe08 /* 13 vars */) = 0
+strace: Process 62703 attached
+[pid 62703] execve("/usr/local/sbin/lsb_release", ["lsb_release", "-a"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62703] execve("/usr/local/bin/lsb_release", ["lsb_release", "-a"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62703] execve("/usr/sbin/lsb_release", ["lsb_release", "-a"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62703] execve("/usr/bin/lsb_release", ["lsb_release", "-a"], 0x7ffe54e67900 /* 13 vars */) = 0
+strace: Process 62704 attached
+[pid 62704] execve("/usr/local/sbin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x7b6d7ee08bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 62704] execve("/usr/local/bin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x7b6d7ee08bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 62704] execve("/usr/sbin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x7b6d7ee08bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 62704] execve("/usr/bin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x7b6d7ee08bb0 /* 14 vars */) = 0
+[pid 62704] +++ exited with 1 +++
+[pid 62703] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=62704, si_uid=0, si_status=1, si_utime=0, si_stime=1} ---
+[pid 62703] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=62703, si_uid=0, si_status=0, si_utime=2, si_stime=2} ---
+strace: Process 62705 attached
+[pid 62705] execve("/usr/local/sbin/uname", ["uname", "-rs"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62705] execve("/usr/local/bin/uname", ["uname", "-rs"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62705] execve("/usr/sbin/uname", ["uname", "-rs"], 0x7ffe54e67900 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 62705] execve("/usr/bin/uname", ["uname", "-rs"], 0x7ffe54e67900 /* 13 vars */) = 0
+[pid 62705] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=62705, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("151.101.128.223")}, 16) = 0
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("151.101.192.223")}, 16) = 0
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("151.101.0.223")}, 16) = 0
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("151.101.64.223")}, 16) = 0
+connect(3, {sa_family=AF_INET6, sin6_port=htons(443), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a04:4e42:200::223", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET6, sin6_port=htons(443), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a04:4e42:400::223", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET6, sin6_port=htons(443), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a04:4e42:600::223", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+connect(3, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+connect(3, {sa_family=AF_INET6, sin6_port=htons(443), sin6_flowinfo=htonl(0), inet_pton(AF_INET6, "2a04:4e42::223", &sin6_addr), sin6_scope_id=0}, 28) = -1 ENETUNREACH (Network is unreachable)
+connect(3, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("151.101.128.223")}, 16) = -1 EINPROGRESS (Operation now in progress)
+ERROR: Could not find a version that satisfies the requirement bootstrap (from versions: none)
+ERROR: No matching distribution found for bootstrap
++++ exited with 1 +++

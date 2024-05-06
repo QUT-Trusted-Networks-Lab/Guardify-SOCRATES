@@ -1,0 +1,170 @@
+Available Tracepoints:
+sys_enter_open
+sys_enter_openat
+sys_enter_creat
+sys_enter_access
+sys_enter_newstat
+sys_enter_newlstat
+sys_enter_newfstatat
+sys_enter_readlink
+sys_enter_readlinkat
+sys_enter_rename
+sys_enter_renameat
+sys_enter_link
+sys_enter_linkat
+sys_enter_unlink
+sys_enter_unlinkat
+sys_enter_symlink
+sys_enter_symlinkat
+sys_enter_mknod
+sys_enter_mknodat
+sys_enter_chmod
+sys_enter_fchmodat
+sys_enter_chown
+sys_enter_lchown
+sys_enter_fchownat
+
+Arguments for Available Tracepoints:
+tracepoint:syscalls:sys_enter_open
+    int __syscall_nr
+    const char * filename
+    int flags
+    umode_t mode
+
+tracepoint:syscalls:sys_enter_openat
+    int __syscall_nr
+    int dfd
+    const char * filename
+    int flags
+    umode_t mode
+
+tracepoint:syscalls:sys_enter_creat
+    int __syscall_nr
+    const char * pathname
+    umode_t mode
+
+tracepoint:syscalls:sys_enter_access
+    int __syscall_nr
+    const char * filename
+    int mode
+
+tracepoint:syscalls:sys_enter_newstat
+    int __syscall_nr
+    const char * filename
+    struct stat * statbuf
+
+tracepoint:syscalls:sys_enter_newlstat
+    int __syscall_nr
+    const char * filename
+    struct stat * statbuf
+
+tracepoint:syscalls:sys_enter_newfstatat
+    int __syscall_nr
+    int dfd
+    const char * filename
+    struct stat * statbuf
+    int flag
+
+tracepoint:syscalls:sys_enter_readlink
+    int __syscall_nr
+    const char * path
+    char * buf
+    int bufsiz
+
+tracepoint:syscalls:sys_enter_readlinkat
+    int __syscall_nr
+    int dfd
+    const char * pathname
+    char * buf
+    int bufsiz
+
+tracepoint:syscalls:sys_enter_rename
+    int __syscall_nr
+    const char * oldname
+    const char * newname
+
+tracepoint:syscalls:sys_enter_renameat
+    int __syscall_nr
+    int olddfd
+    const char * oldname
+    int newdfd
+    const char * newname
+
+tracepoint:syscalls:sys_enter_link
+    int __syscall_nr
+    const char * oldname
+    const char * newname
+
+tracepoint:syscalls:sys_enter_linkat
+    int __syscall_nr
+    int olddfd
+    const char * oldname
+    int newdfd
+    const char * newname
+    int flags
+
+tracepoint:syscalls:sys_enter_unlink
+    int __syscall_nr
+    const char * pathname
+
+tracepoint:syscalls:sys_enter_unlinkat
+    int __syscall_nr
+    int dfd
+    const char * pathname
+    int flag
+
+tracepoint:syscalls:sys_enter_symlink
+    int __syscall_nr
+    const char * oldname
+    const char * newname
+
+tracepoint:syscalls:sys_enter_symlinkat
+    int __syscall_nr
+    const char * oldname
+    int newdfd
+    const char * newname
+
+tracepoint:syscalls:sys_enter_mknod
+    int __syscall_nr
+    const char * filename
+    umode_t mode
+    unsigned dev
+
+tracepoint:syscalls:sys_enter_mknodat
+    int __syscall_nr
+    int dfd
+    const char * filename
+    umode_t mode
+    unsigned int dev
+
+tracepoint:syscalls:sys_enter_chmod
+    int __syscall_nr
+    const char * filename
+    umode_t mode
+
+tracepoint:syscalls:sys_enter_fchmodat
+    int __syscall_nr
+    int dfd
+    const char * filename
+    umode_t mode
+
+tracepoint:syscalls:sys_enter_chown
+    int __syscall_nr
+    const char * filename
+    uid_t user
+    gid_t group
+
+tracepoint:syscalls:sys_enter_lchown
+    int __syscall_nr
+    const char * filename
+    uid_t user
+    gid_t group
+
+tracepoint:syscalls:sys_enter_fchownat
+    int __syscall_nr
+    int dfd
+    const char * filename
+    uid_t user
+    gid_t group
+    int flag
+

@@ -1,0 +1,191 @@
+execve("/usr/bin/pip", ["pip", "install", "pypi_malregistry/ceedee/5.8.2/ce"...], 0x7ffd9bcc5478 /* 13 vars */) = 0
+strace: Process 65513 attached
+[pid 65513] execve("/usr/local/sbin/lsb_release", ["lsb_release", "-a"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65513] execve("/usr/local/bin/lsb_release", ["lsb_release", "-a"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65513] execve("/usr/sbin/lsb_release", ["lsb_release", "-a"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65513] execve("/usr/bin/lsb_release", ["lsb_release", "-a"], 0x7ffc705af5e0 /* 13 vars */) = 0
+strace: Process 65514 attached
+[pid 65514] execve("/usr/local/sbin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x77e32e5e8bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 65514] execve("/usr/local/bin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x77e32e5e8bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 65514] execve("/usr/sbin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x77e32e5e8bb0 /* 14 vars */) = -1 ENOENT (No such file or directory)
+[pid 65514] execve("/usr/bin/dpkg-query", ["dpkg-query", "-f", "${Version} ${Provides}\n", "-W", "lsb-core", "lsb-cxx", "lsb-graphics", "lsb-desktop", "lsb-languages", "lsb-multimedia", "lsb-printing", "lsb-security"], 0x77e32e5e8bb0 /* 14 vars */) = 0
+[pid 65514] +++ exited with 1 +++
+[pid 65513] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65514, si_uid=0, si_status=1, si_utime=0, si_stime=0} ---
+[pid 65513] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65513, si_uid=0, si_status=0, si_utime=4, si_stime=2} ---
+strace: Process 65515 attached
+[pid 65515] execve("/usr/local/sbin/uname", ["uname", "-rs"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65515] execve("/usr/local/bin/uname", ["uname", "-rs"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65515] execve("/usr/sbin/uname", ["uname", "-rs"], 0x7ffc705af5e0 /* 13 vars */) = -1 ENOENT (No such file or directory)
+[pid 65515] execve("/usr/bin/uname", ["uname", "-rs"], 0x7ffc705af5e0 /* 13 vars */) = 0
+[pid 65515] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65515, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+Processing ./pypi_malregistry/ceedee/5.8.2/ceedee-5.8.2.tar.gz
+  Preparing metadata (setup.py): started
+strace: Process 65516 attached
+[pid 65516] execve("/usr/bin/python3", ["/usr/bin/python3", "-c", "\nexec(compile('''\n# This is <pip"..., "egg_info", "--egg-base", "/tmp/pip-pip-egg-info-lmliwl75"], 0x731da8abd4b0 /* 14 vars */) = 0
+strace: Process 65517 attached
+[pid 65517] execve("/bin/sh", ["/bin/sh", "-c", "hostname"], 0x7fff681af630 /* 14 vars */) = 0
+strace: Process 65518 attached
+[pid 65518] execve("/usr/bin/hostname", ["hostname"], 0x5bcdac46d700 /* 15 vars */) = 0
+[pid 65518] +++ exited with 0 +++
+[pid 65517] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65518, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65517] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65517, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65519 attached
+[pid 65519] execve("/bin/sh", ["/bin/sh", "-c", "whoami"], 0x7fff681af630 /* 14 vars */) = 0
+strace: Process 65520 attached
+[pid 65520] execve("/usr/bin/whoami", ["whoami"], 0x5fab94b1c6e8 /* 15 vars */) = 0
+[pid 65520] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65520] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65520] +++ exited with 0 +++
+[pid 65519] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65520, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65519] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65519, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65521 attached
+[pid 65521] execve("/bin/sh", ["/bin/sh", "-c", "cat /etc/passwd"], 0x7fff681af630 /* 14 vars */) = 0
+strace: Process 65522 attached
+[pid 65522] execve("/usr/bin/cat", ["cat", "/etc/passwd"], 0x60ba0a519748 /* 15 vars */) = 0
+[pid 65522] +++ exited with 0 +++
+[pid 65521] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65522, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65521] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65521, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65523 attached
+[pid 65523] execve("/bin/sh", ["/bin/sh", "-c", "uname -a"], 0x7fff681af630 /* 14 vars */) = 0
+strace: Process 65524 attached
+[pid 65524] execve("/usr/bin/uname", ["uname", "-a"], 0x62543922b738 /* 15 vars */) = 0
+[pid 65524] +++ exited with 0 +++
+[pid 65523] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65524, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65523] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65523, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65525 attached
+[pid 65525] execve("/bin/sh", ["/bin/sh", "-c", "pwd"], 0x7fff681af630 /* 14 vars */) = 0
+[pid 65525] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65525, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65526 attached
+[pid 65526] execve("/bin/sh", ["/bin/sh", "-c", "ls -la"], 0x7fff681af630 /* 14 vars */) = 0
+strace: Process 65527 attached
+[pid 65527] execve("/usr/bin/ls", ["ls", "-la"], 0x581a0d3ab730 /* 15 vars */) = 0
+[pid 65527] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65527] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65527] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65527] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65527] +++ exited with 0 +++
+[pid 65526] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65527, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65526] +++ exited with 0 +++
+[pid 65516] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65526, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65516] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65516] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("54.82.236.58")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("3.91.141.182")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("34.202.170.60")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("35.172.21.99")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("44.199.107.38")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.2.125.62")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.202.132.229")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.203.206.243")}, 16) = 0
+[pid 65516] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("54.82.236.58")}, 16) = 0
+[pid 65516] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65516, si_uid=0, si_status=0, si_utime=31, si_stime=13} ---
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from ceedee==5.8.2) (2.25.1)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.10/dist-packages (from ceedee==5.8.2) (1.4.1.post1)
+Requirement already satisfied: joblib>=1.2.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->ceedee==5.8.2) (1.4.0)
+Requirement already satisfied: scipy>=1.6.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->ceedee==5.8.2) (1.13.0)
+Requirement already satisfied: numpy<2.0,>=1.19.5 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->ceedee==5.8.2) (1.26.4)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /usr/local/lib/python3.10/dist-packages (from scikit-learn->ceedee==5.8.2) (3.4.0)
+Building wheels for collected packages: ceedee
+  Building wheel for ceedee (setup.py): started
+strace: Process 65528 attached
+[pid 65528] execve("/usr/bin/python3", ["/usr/bin/python3", "-u", "-c", "\nexec(compile('''\n# This is <pip"..., "bdist_wheel", "-d", "/tmp/pip-wheel-8ki6x8ox"], 0x731da8abd530 /* 14 vars */) = 0
+strace: Process 65529 attached
+[pid 65529] execve("/bin/sh", ["/bin/sh", "-c", "hostname"], 0x7ffcba55a008 /* 14 vars */) = 0
+strace: Process 65530 attached
+[pid 65530] execve("/usr/bin/hostname", ["hostname"], 0x59fad148e700 /* 15 vars */) = 0
+[pid 65530] +++ exited with 0 +++
+[pid 65529] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65530, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65529] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65529, si_uid=0, si_status=0, si_utime=0, si_stime=1} ---
+strace: Process 65531 attached
+[pid 65531] execve("/bin/sh", ["/bin/sh", "-c", "whoami"], 0x7ffcba55a008 /* 14 vars */) = 0
+strace: Process 65532 attached
+[pid 65532] execve("/usr/bin/whoami", ["whoami"], 0x5df86bebc6e8 /* 15 vars */) = 0
+[pid 65532] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65532] connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65532] +++ exited with 0 +++
+[pid 65531] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65532, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65531] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65531, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65533 attached
+[pid 65533] execve("/bin/sh", ["/bin/sh", "-c", "cat /etc/passwd"], 0x7ffcba55a008 /* 14 vars */) = 0
+strace: Process 65534 attached
+[pid 65534] execve("/usr/bin/cat", ["cat", "/etc/passwd"], 0x5b5cd01db748 /* 15 vars */) = 0
+[pid 65534] +++ exited with 0 +++
+[pid 65533] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65534, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65533] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65533, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65535 attached
+[pid 65535] execve("/bin/sh", ["/bin/sh", "-c", "uname -a"], 0x7ffcba55a008 /* 14 vars */) = 0
+strace: Process 65536 attached
+[pid 65536] execve("/usr/bin/uname", ["uname", "-a"], 0x5839f1442738 /* 15 vars */) = 0
+[pid 65536] +++ exited with 0 +++
+[pid 65535] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65536, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65535] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65535, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65537 attached
+[pid 65537] execve("/bin/sh", ["/bin/sh", "-c", "pwd"], 0x7ffcba55a008 /* 14 vars */) = 0
+[pid 65537] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65537, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+strace: Process 65538 attached
+[pid 65538] execve("/bin/sh", ["/bin/sh", "-c", "ls -la"], 0x7ffcba55a008 /* 14 vars */) = 0
+strace: Process 65539 attached
+[pid 65539] execve("/usr/bin/ls", ["ls", "-la"], 0x604dd7986730 /* 15 vars */) = 0
+[pid 65539] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65539] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65539] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65539] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65539] +++ exited with 0 +++
+[pid 65538] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65539, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65538] +++ exited with 0 +++
+[pid 65528] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65538, si_uid=0, si_status=0, si_utime=0, si_stime=0} ---
+[pid 65528] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65528] connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.203.206.243")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.2.125.62")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("3.91.141.182")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.202.132.229")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("54.82.236.58")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("34.202.170.60")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("44.199.107.38")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_UNSPEC, sa_data="\0\0\0\0\0\0\0\0\0\0\0\0\0\0"}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("35.172.21.99")}, 16) = 0
+[pid 65528] connect(4, {sa_family=AF_INET, sin_port=htons(443), sin_addr=inet_addr("52.203.206.243")}, 16) = 0
+[pid 65528] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=65528, si_uid=0, si_status=0, si_utime=36, si_stime=22} ---
+  Building wheel for ceedee (setup.py): finished with status 'done'
+  Created wheel for ceedee: filename=ceedee-5.8.2-py3-none-any.whl size=2260 sha256=73de0097f06bfe9e75f286fa0822e3247fa4250cdda0f00814671e4288782549
+  Stored in directory: /root/.cache/pip/wheels/4b/99/de/39d0b7877fc7c76d8c3d2bbd973608035cb1ce104f00cefeec
+Successfully built ceedee
+Installing collected packages: ceedee
+  Attempting uninstall: ceedee
+    Found existing installation: ceedee 5.8.2
+    Uninstalling ceedee-5.8.2:
+      Successfully uninstalled ceedee-5.8.2
+Successfully installed ceedee-5.8.2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
++++ exited with 0 +++

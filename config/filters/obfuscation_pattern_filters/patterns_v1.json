@@ -1,0 +1,14 @@
+{
+    "Builtins access": "getattr\\s*\\(\\s*__builtins__\\s*,",
+    "Join-Map obfuscation": "\\.join\\s*\\(\\s*map\\s*\\(",
+    "Octal obfuscation": "oct\\.\\w+\\(\\)\\[",
+    "Hex obfuscation": "hex\\.\\w+\\(\\)\\[",
+    "Copyright obfuscation": "copyright\\.\\w+\\(\\)\\[",
+    "Unicode chars": "[\\u0080-\\uffff]",
+    "Bitwise operations": "<<|>>",
+    "Long variable name": "\\w{30,}",
+    "Bitwise manipulation": "[\\^\\&\\|\\~]",
+    "Eval usage": "eval\\s*\\(",
+    "Exec usage": "exec\\s*\\(",
+    "Potential Base64": "[A-Za-z0-9+/]{30,}={0,2}"
+}

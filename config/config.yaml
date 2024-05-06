@@ -1,0 +1,80 @@
+# Guardify Configuration File
+
+# Global Settings
+global:
+  log_directory: "./logs"   # Relative path from the main Guardify directory to the logs directory
+  refresh_rate: 10          # Dashboard refresh rate in seconds
+  start_on_boot: true       # Whether Guardify should start on system boot
+
+# Monitoring Engine Configuration
+monitoring_engine:
+  typo_squatting_alerts: true          # Toggle Typo Squatting Alerts
+  code_obfuscation_detection: true     # Toggle Code Obfuscation Detection
+
+# Plugins Configuration
+plugins:
+  network_activity:
+    enabled: false                      # Toggle Network Activity Monitoring
+    alert_threshold: 100                # Alert threshold for connections
+    monitored_ports: [80, 443]         # Ports to monitor
+    ignored_ips_file: "./config/filters/network_filters/secured_ips.txt"  # File with IPs to ignore, relative path
+    log_directory: "./logs/network_activity_logs/"  # Directory for network activity logs
+  file_path_checks:
+    enabled: true                      # Toggle File Path Checks
+    paths_config_file: "./config/filters/filepath_filters/filepaths_v1.json"  # File with paths to monitor, relative path
+    log_directory: "./logs/file_path_access_logs/"  # Directory for log file path access
+
+# Typo Squatting Detection Configuration
+typo_squatting:
+  enabled: true
+  log_directory: "./logs/typo_squatting_logs/"  # Directory for typo squatting detection logs
+  package_managers:
+    pip:                               # Configuration for pip packages
+      enabled: true
+      suspect_keywords_file: "./config/filters/typosquat_filters/pip_suspect_names.txt"
+    npm:                               # Configuration for npm packages
+      enabled: false
+      suspect_keywords_file: "./config/filters/typosquat_filters/npm_suspect_names.txt"
+
+
+# Code Obfuscation Detection Configuration
+code_obfuscation:
+  enabled: true
+  directories_to_scan:
+    - "/usr/local/lib/python3.9/site-packages"
+    - "/usr/local/lib/node_modules"
+  log_directory: "./logs/obfuscation_logs/"  # Directory for code obfuscation detection logs
+  obfuscation_patterns_file: "./config/filters/obfuscation_pattern_filters/patterns_v1.json"  # File with obfuscation patterns, relative path
+
+# User Interface Configuration
+user_interface:
+  dashboard:
+    enabled: true                      # Toggle Dashboard
+  keyboard_navigation:
+    enabled: true                      # Toggle Keyboard Navigation
+
+# Alerts and Notifications Configuration
+alerts:
+  instant_warnings: true               # Toggle Instant Warnings
+  event_logging: true                  # Toggle Event Logging
+  logs_directory_structure:            # Log directories structure
+    alerts: "alerts"
+    warnings: "warnings"
+    obfuscation_logs: "obfuscation_logs"
+    typo_squatting_logs: "typo_squatting_logs"
+    network_activity_logs: "network_activity_logs"
+    file_path_access_logs: "file_path_access_logs"
+    system_call_logs: "system_call_logs"
+
+  # Email Notification System
+  email_notifications: true
+  email_details:
+    smtp_server: "smtp.example.com"
+    smtp_port: 587
+    username: "alert@example.com"
+    password: "password123"
+    from_address: "alert@example.com"
+    to_addresses:
+      - "admin1@example.com"
+      - "admin2@example.com"
+

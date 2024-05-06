@@ -1,0 +1,100 @@
+#!/usr/bin/env bpftrace
+tracepoint:syscalls:sys_enter_open /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_open -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_openat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_openat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_creat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_creat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->pathname));
+}
+
+tracepoint:syscalls:sys_enter_access /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_access -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_execve /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_execve -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_newstat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_newstat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_newlstat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_newlstat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_newfstatat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_newfstatat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_readlink /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_readlink -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->path));
+}
+
+tracepoint:syscalls:sys_enter_readlinkat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_readlinkat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->pathname));
+}
+
+tracepoint:syscalls:sys_enter_rename /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_rename -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_renameat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_renameat -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_link /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_link -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_linkat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_linkat -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_unlink /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_unlink -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->pathname));
+}
+
+tracepoint:syscalls:sys_enter_unlinkat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_unlinkat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->pathname));
+}
+
+tracepoint:syscalls:sys_enter_symlink /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_symlink -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_symlinkat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_symlinkat -> %s, %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->oldname), str(args->newname));
+}
+
+tracepoint:syscalls:sys_enter_mknod /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_mknod -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_mknodat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_mknodat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_chmod /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_chmod -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_fchmodat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_fchmodat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_chown /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_chown -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_lchown /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_lchown -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
+
+tracepoint:syscalls:sys_enter_fchownat /comm == "pip3" || comm == "npm" || comm == "pip"/ {
+    printf("%-15s %-20s %-10d sys_enter_fchownat -> %s\n", strftime("%H:%M:%S", nsecs), comm, pid, str(args->filename));
+}
