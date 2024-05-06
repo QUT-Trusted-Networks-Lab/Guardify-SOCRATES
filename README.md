@@ -1,4 +1,3 @@
-```markdown
 # Guardify
 
 Guardify is a robust Python package security tool designed to protect your Python projects from various security threats. It offers features to detect and prevent issues like obfuscation, typosquatting, suspicious file path access, and malicious network activity.
@@ -72,10 +71,7 @@ Guardify uses a `config/config.yaml` file to customize its behavior. Modify sett
   - pip: `config/filters/typosquat_filters/pip_suspect_names.txt`
 
 ## Contributing
-We welcome contributions to Guardify! Please read our [contribution guidelines](CONTRIBUTING.md) to get started.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+We welcome contributions to Guardify!.
 
 ## Author
 For more information, contact the author at [LinkedIn Profile](https://www.linkedin.com/in/rgchandrasekaraa/).
