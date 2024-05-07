@@ -74,5 +74,5 @@ Guardify uses a `config/config.yaml` file to customize its behavior. Modify sett
 We welcome contributions to Guardify!.
 
 ## Author
-For more information, contact the author at [LinkedIn Profile](https://www.linkedin.com/in/rgchandrasekaraa/).
+For more information, contact the Dr. Gowri Sankar Ramachandran (g.ramachandran@qut.edu.au) and Mr. Chandrasekaraa Ramadoss Ganesh (chandrasekaraa.ramadossganesh@connect.qut.edu.au) [LinkedIn Profile of Chandrasekaraa](https://www.linkedin.com/in/rgchandrasekaraa/).
 ```
